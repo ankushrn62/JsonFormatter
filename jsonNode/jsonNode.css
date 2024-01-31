@@ -1,0 +1,56 @@
+.json-viewer {
+    font-family: 'Courier New', monospace;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 10px;
+    overflow: auto;
+    white-space: pre; /* Ensures formatting is preserved */
+    font-size: 0.9em;
+    line-height: 1.5em;
+    color: #333;
+}
+
+.json-node {
+    margin-left: 20px;
+}
+
+.toggle {
+    cursor: pointer;
+    user-select: none;
+}
+
+.json-key {
+    color: #a626a4; /* Purple */
+    font-weight: bold;
+}
+
+.json-value {
+    color: #e45649; /* Red */
+}
+
+.json-value[data-type="string"] {
+    color: #50a14f; /* Green */
+}
+
+.json-value[data-type="number"] {
+    color: #986801; /* Brown */
+}
+
+.json-value[data-type="boolean"] {
+    color: #0184bc; /* Blue */
+}
+
+.json-value[data-type="null"] {
+    color: #a626a4; /* Purple */
+}
+
+.toggle::before {
+    content: '▶';
+    display: inline-block;
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+.json-node[data-expanded="true"] .toggle::before {
+    transform: rotate(90deg);
+}

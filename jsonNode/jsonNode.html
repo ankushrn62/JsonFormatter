@@ -1,0 +1,18 @@
+<template>
+    <div class="json-node" data-expanded={node.expanded}>
+        <template if:true={node.isParent}>
+            <span class="toggle" onclick={toggleNode}>
+                {toggleLabel}
+            </span>
+        </template>
+        <span class="json-key">{node.key}: </span>
+        <template if:true={node.expanded}>
+            <template for:each={node.children} for:item="childNode">
+                <c-json-node key={childNode.key} node={childNode}></c-json-node>
+            </template>
+        </template>
+        <template if:false={node.isParent}>
+            <span class="json-value">{node.value}</span>
+        </template>
+    </div>
+</template>
