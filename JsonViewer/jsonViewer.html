@@ -1,0 +1,8 @@
+<template>
+    <h1>JSON viewer</h1>
+    <div class="json-viewer" style="background:white; padding:21px;font-size: 17px;">
+        <template if:true={jsonData}>
+            <c-json-node node={jsonData}></c-json-node>
+        </template>
+    </div>
+</template>

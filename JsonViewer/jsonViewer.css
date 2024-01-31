@@ -1,0 +1,9 @@
+.json-tree {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.json-tree li::before {
+    content: '📁';
+    padding-right: 5px;
+}
